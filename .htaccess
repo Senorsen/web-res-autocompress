@@ -1,10 +1,6 @@
 RewriteEngine On
 RewriteBase /
 
-RewriteRule ^f/(\d+) Senstore/?id=$1
-RewriteRule ^fadd$ Senstore/add.php
-
-
-RewriteRule ^(.+)[.]org[.]js $1.org.js
+RewriteRule ^(.+)[.]org[.]js $1.org.js [L]
 RewriteRule ^(.+)[.]org[.]js $1.js [L]
 RewriteRule ^(.+)[.]js$ _parser/parse.php?type=js&file=../$1
