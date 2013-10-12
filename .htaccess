@@ -1,6 +1,4 @@
 RewriteEngine On
 RewriteBase /
 
-RewriteCond $1 (?!org)[.]js$
-RewriteRule ^(.+)[.]js$ _parser/parser.php?type=js&file=../$1
-RewriteRule ^(.+)[.]org[.]js $1.js
+RewriteRule ^(.+)\.js$ _parser/parser.php?type=js&file=../$1 [L]
