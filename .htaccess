@@ -3,4 +3,4 @@ RewriteBase /
 
 RewriteRule ^(.+)[.]org[.]js $1.org.js [L]
 RewriteRule ^(.+)[.]org[.]js $1.js [L]
-RewriteRule ^(.+)[.]js$ _parser/parse.php?type=js&file=../$1
+RewriteRule ^(.+)[.]js$ _parser/parser.php?type=js&file=../$1

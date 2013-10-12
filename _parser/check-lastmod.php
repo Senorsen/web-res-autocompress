@@ -11,6 +11,10 @@ if (isset($_SERVER['HTTP_IF_MODIFIED_SINCE'])) {
 }
 
 //else
+if (!file_exists('./temp/')) mkdir('./temp/', 0777);
+if (!file_exists('./temp/timestamp/')) mkdir('./temp/timestamp/', 0777);
+if (!file_exists('./temp/cached/')) mkdir('./temp/cached/', 0777);
+
 if (file_exists($ftimestamp)) {
     header('Last-Modified: '.date('D, d M Y H:i:s \G\M\T', $filelastmod));
     $timeinfile = intval(file_get_contents($ftimestamp));
